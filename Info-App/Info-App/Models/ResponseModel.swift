@@ -1,5 +1,5 @@
 //
-//  InfoModel.swift
+//  ResponseModel.swift
 //  Info-App
 //
 //  Created by Suparno on 09/10/2019.
@@ -9,21 +9,18 @@
 import UIKit
 import ObjectMapper
 
-class InfoModel: Mappable {
+class ResponseModel: Mappable {
     
     var title : String?
-    var description : String?
-    var imageHref : String?
+    var infoArray : [InfoModel]?
     
     convenience required init?(map: Map) {
         self.init()
     }
-
+    
     // Mappable
     func mapping(map: Map) {
         title    <- map["title"]
-        description <- map["description"]
-        imageHref <- map["imageHref"]
+        infoArray <- map["rows"]
     }
 }
-

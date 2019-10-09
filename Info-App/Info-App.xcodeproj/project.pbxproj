@@ -13,6 +13,9 @@
 		24329C08234DAB1A0039A2E7 /* Info_AppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C07234DAB1A0039A2E7 /* Info_AppTests.swift */; };
 		24329C15234DB5180039A2E7 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C14234DB5180039A2E7 /* HomeViewController.swift */; };
 		24329C17234DB5620039A2E7 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C16234DB5620039A2E7 /* InfoModel.swift */; };
+		24329C1A234DBDEC0039A2E7 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C19234DBDEC0039A2E7 /* NetworkManger.swift */; };
+		24329C1B234DBDEC0039A2E7 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C19234DBDEC0039A2E7 /* NetworkManger.swift */; };
+		24329C1C234DCAA20039A2E7 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C16234DB5620039A2E7 /* InfoModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +39,7 @@
 		24329C09234DAB1A0039A2E7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		24329C14234DB5180039A2E7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		24329C16234DB5620039A2E7 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
+		24329C19234DBDEC0039A2E7 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -78,6 +82,7 @@
 			isa = PBXGroup;
 			children = (
 				24329BF0234DAB190039A2E7 /* AppDelegate.swift */,
+				24329C18234DBDCE0039A2E7 /* ManagerClasses */,
 				24329C12234DB5180039A2E7 /* Models */,
 				24329C13234DB5180039A2E7 /* ViewControllers */,
 				24329BF9234DAB1A0039A2E7 /* Assets.xcassets */,
@@ -110,6 +115,14 @@
 				24329C14234DB5180039A2E7 /* HomeViewController.swift */,
 			);
 			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		24329C18234DBDCE0039A2E7 /* ManagerClasses */ = {
+			isa = PBXGroup;
+			children = (
+				24329C19234DBDEC0039A2E7 /* NetworkManger.swift */,
+			);
+			path = ManagerClasses;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -214,6 +227,7 @@
 			files = (
 				24329BF1234DAB190039A2E7 /* AppDelegate.swift in Sources */,
 				24329C15234DB5180039A2E7 /* HomeViewController.swift in Sources */,
+				24329C1A234DBDEC0039A2E7 /* NetworkManger.swift in Sources */,
 				24329C17234DB5620039A2E7 /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -222,7 +236,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				24329C1B234DBDEC0039A2E7 /* NetworkManger.swift in Sources */,
 				24329C08234DAB1A0039A2E7 /* Info_AppTests.swift in Sources */,
+				24329C1C234DCAA20039A2E7 /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

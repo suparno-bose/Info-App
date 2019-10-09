@@ -16,6 +16,8 @@
 		24329C1A234DBDEC0039A2E7 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C19234DBDEC0039A2E7 /* NetworkManger.swift */; };
 		24329C1B234DBDEC0039A2E7 /* NetworkManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C19234DBDEC0039A2E7 /* NetworkManger.swift */; };
 		24329C1C234DCAA20039A2E7 /* InfoModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C16234DB5620039A2E7 /* InfoModel.swift */; };
+		24329C1E234DFB950039A2E7 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C1D234DFB950039A2E7 /* ResponseModel.swift */; };
+		24329C1F234DFB950039A2E7 /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329C1D234DFB950039A2E7 /* ResponseModel.swift */; };
 		75F61F68C87156CDC6EF59B2 /* Pods_Info_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 00301D570331E1ECF31F622F /* Pods_Info_App.framework */; };
 		7E3B8FE8784C098A92F6D6B0 /* Pods_Info_AppTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 05A9D1058BBB71CD7EB921EB /* Pods_Info_AppTests.framework */; };
 /* End PBXBuildFile section */
@@ -45,6 +47,7 @@
 		24329C14234DB5180039A2E7 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		24329C16234DB5620039A2E7 /* InfoModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InfoModel.swift; sourceTree = "<group>"; };
 		24329C19234DBDEC0039A2E7 /* NetworkManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManger.swift; sourceTree = "<group>"; };
+		24329C1D234DFB950039A2E7 /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		846758374B4A0F7C7D6C506F /* Pods-Info-AppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Info-AppTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Info-AppTests/Pods-Info-AppTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C2E607DF9EF69A3849605867 /* Pods-Info-App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Info-App.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Info-App/Pods-Info-App.debug.xcconfig"; sourceTree = "<group>"; };
 		F21EDC9AA205258170BE5856 /* Pods-Info-App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Info-App.release.xcconfig"; path = "Pods/Target Support Files/Pods-Info-App/Pods-Info-App.release.xcconfig"; sourceTree = "<group>"; };
@@ -117,6 +120,7 @@
 			isa = PBXGroup;
 			children = (
 				24329C16234DB5620039A2E7 /* InfoModel.swift */,
+				24329C1D234DFB950039A2E7 /* ResponseModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -310,12 +314,14 @@
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Info-App/Pods-Info-App-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
+				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 			);
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -332,6 +338,7 @@
 				24329BF1234DAB190039A2E7 /* AppDelegate.swift in Sources */,
 				24329C15234DB5180039A2E7 /* HomeViewController.swift in Sources */,
 				24329C1A234DBDEC0039A2E7 /* NetworkManger.swift in Sources */,
+				24329C1E234DFB950039A2E7 /* ResponseModel.swift in Sources */,
 				24329C17234DB5620039A2E7 /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +349,7 @@
 			files = (
 				24329C1B234DBDEC0039A2E7 /* NetworkManger.swift in Sources */,
 				24329C08234DAB1A0039A2E7 /* Info_AppTests.swift in Sources */,
+				24329C1F234DFB950039A2E7 /* ResponseModel.swift in Sources */,
 				24329C1C234DCAA20039A2E7 /* InfoModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

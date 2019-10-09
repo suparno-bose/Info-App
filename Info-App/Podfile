@@ -7,6 +7,7 @@ target 'Info-App' do
 
   # Pods for Info-App
   pod 'ObjectMapper', '3.3.0'
+  pod 'SDWebImage', :modular_headers => true
 
   target 'Info-AppTests' do
     inherit! :search_paths

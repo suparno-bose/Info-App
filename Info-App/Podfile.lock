@@ -1,16 +1,22 @@
 PODS:
   - ObjectMapper (3.3.0)
+  - SDWebImage (5.1.1):
+    - SDWebImage/Core (= 5.1.1)
+  - SDWebImage/Core (5.1.1)
 
 DEPENDENCIES:
   - ObjectMapper (= 3.3.0)
+  - SDWebImage
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
     - ObjectMapper
+    - SDWebImage
 
 SPEC CHECKSUMS:
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
 
-PODFILE CHECKSUM: 34b3a613c0f36a350fec1a83a31c95edce4f50b9
+PODFILE CHECKSUM: be28fe648e0fb4257a0965363dcb3694b65d636e
 
 COCOAPODS: 1.5.0

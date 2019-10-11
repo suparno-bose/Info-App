@@ -2,6 +2,7 @@ PODS:
   - EasyLoadingShimmer (1.0.0)
   - HexColors (6.0.0)
   - ObjectMapper (3.3.0)
+  - ReachabilitySwift (4.3.1)
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
   - SDWebImage/Core (5.1.1)
@@ -12,6 +13,7 @@ DEPENDENCIES:
   - EasyLoadingShimmer
   - HexColors
   - ObjectMapper (= 3.3.0)
+  - ReachabilitySwift
   - SDWebImage
   - SnapKit (~> 4.0.0)
   - Toast-Swift
@@ -21,6 +23,7 @@ SPEC REPOS:
     - EasyLoadingShimmer
     - HexColors
     - ObjectMapper
+    - ReachabilitySwift
     - SDWebImage
     - SnapKit
     - Toast-Swift
@@ -29,10 +32,11 @@ SPEC CHECKSUMS:
   EasyLoadingShimmer: baf7840e33ac2c542b16643597d2e542dc03db3f
   HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
+  ReachabilitySwift: 4032e2f59586e11e3b0ebe15b167abdd587a388b
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
   Toast-Swift: 36f4720243c8582c2be243a60a51e193c761f541
 
-PODFILE CHECKSUM: 7e6b602380959655dc5303875a78839ea5765b58
+PODFILE CHECKSUM: dc26ec2a42a34d805bc1cc05a794c93f16332c1e
 
 COCOAPODS: 1.5.0

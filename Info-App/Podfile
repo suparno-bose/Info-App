@@ -12,6 +12,7 @@ target 'Info-App' do
   pod 'HexColors'
   pod 'EasyLoadingShimmer'
   pod 'Toast-Swift'
+  pod 'ReachabilitySwift'
 
   target 'Info-AppTests' do
     inherit! :search_paths

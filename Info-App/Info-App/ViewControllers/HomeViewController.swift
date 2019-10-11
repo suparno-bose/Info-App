@@ -12,7 +12,7 @@ import SnapKit
 import HexColors
 import EasyLoadingShimmer
 import Toast_Swift
-
+import Reachability
 class HomeViewController: UIViewController {
 
     // MARK: - UI variables
@@ -21,11 +21,24 @@ class HomeViewController: UIViewController {
     var factTableView   : UITableView!
     // MARK: - Data variables
     var responseData : ResponseModel?
+    // MARK: -
+    let reachability = Reachability()!
     
     // MARK: - Life-cycle methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         setupUI()
+        //Initialise Reachability
+        reachability.whenUnreachable = { _ in
+            self.view.makeToast("Please check your internet connection...", duration: 3.0, position: .bottom)
+        }
+        do {
+            try reachability.startNotifier()
+        } catch {
+            print("Unable to start notifier")
+        }
+        
         fetchInfoData()
     }
     
@@ -83,6 +96,12 @@ class HomeViewController: UIViewController {
     
     // MARK: - Data mannagement methods
     @objc func fetchInfoData() {
+        guard reachability.connection != .none else{
+            self.endRefreshing()
+            self.view.makeToast("Please check your internet connection...", duration: 3.0, position: .bottom)
+            return
+        }
+        
         EasyLoadingShimmer.startCovering(for: self.factTableView, with: ["Loading..", "Loading..", "Loading..", "Loading.."])
         NetworkManger.getInfoData { (responseModel, error) in
             if error != nil{

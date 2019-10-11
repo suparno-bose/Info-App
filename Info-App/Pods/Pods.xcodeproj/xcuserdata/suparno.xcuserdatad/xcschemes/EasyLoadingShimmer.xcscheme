@@ -14,10 +14,10 @@
             buildForArchiving = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "5E29F3DFAC34482A11FAB7C5DDCCA6C8"
-               BlueprintName = "SDWebImage"
+               BlueprintIdentifier = "04CC10EC19212A0337B31549E28912FC"
+               BlueprintName = "EasyLoadingShimmer"
                ReferencedContainer = "container:Pods.xcodeproj"
-               BuildableName = "SDWebImage.framework">
+               BuildableName = "EasyLoadingShimmer.framework">
             </BuildableReference>
          </BuildActionEntry>
       </BuildActionEntries>

@@ -10,6 +10,9 @@ import UIKit
 import SDWebImage
 import SnapKit
 import HexColors
+import EasyLoadingShimmer
+import Toast_Swift
+
 class HomeViewController: UIViewController {
 
     // MARK: - UI variables
@@ -28,18 +31,21 @@ class HomeViewController: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
+        self.addRefreshControl()
     }
     
     // MARK: - UI related methods
     func setupUI(){
+        //Navigationbar beautification
         let attrs = [
             NSAttributedStringKey.foregroundColor: UIColor.darkGray,
             NSAttributedStringKey.font: UIFont(name: "Raleway-Light", size: 28.0)
             ]
         navigationController?.navigationBar.titleTextAttributes = attrs as Any as? [NSAttributedStringKey: Any]
         navigationController?.navigationBar.backgroundColor = UIColor("#34495e") // Balize hole
-        self.view.backgroundColor = UIColor("#34495e") // Wet Ashfalt
         
+        self.view.backgroundColor = UIColor("#34495e") // Wet Ashfalt
+        //Table View initialisation
         factTableView = UITableView(frame: CGRect.zero)
         factTableView.backgroundColor = UIColor.clear
         self.view.addSubview(factTableView)
@@ -52,7 +58,7 @@ class HomeViewController: UIViewController {
         }
         
         factTableView.dataSource = self
-        
+        factTableView.separatorColor = UIColor.gray
         factTableView.register(FactCellTableViewCell.self, forCellReuseIdentifier: "FactCell")
         factTableView.estimatedRowHeight = 80
         factTableView.rowHeight = UITableViewAutomaticDimension
@@ -63,15 +69,33 @@ class HomeViewController: UIViewController {
         self.factTableView.reloadData()
     }
     
+    @objc func addRefreshControl() {
+        // Add refresh Controller to scrollview
+        let rc = UIRefreshControl()
+        rc.addTarget(self, action: #selector(self.fetchInfoData), for: UIControlEvents.valueChanged)
+        rc.tintColor = UIColor.white
+        self.factTableView.refreshControl = rc
+    }
+    
+    func endRefreshing() {
+        self.factTableView.refreshControl?.endRefreshing()
+    }
+    
     // MARK: - Data mannagement methods
-    func fetchInfoData() {
+    @objc func fetchInfoData() {
+        EasyLoadingShimmer.startCovering(for: self.factTableView, with: ["Loading..", "Loading..", "Loading..", "Loading.."])
         NetworkManger.getInfoData { (responseModel, error) in
             if error != nil{
-                
+                DispatchQueue.main.async {
+                    self.endRefreshing()
+                    self.view.makeToast("Unable to reach to the server. Try after some time...", duration: 3.0, position: .bottom)
+                }
             }
             else{
                 self.responseData = responseModel
                 DispatchQueue.main.async {
+                    self.endRefreshing()
+                    EasyLoadingShimmer.stopCovering(for: self.factTableView)
                     self.updateUI()
                 }
             }

@@ -112,7 +112,7 @@ class FactCellTableViewCell: UITableViewCell {
         self.descriptionLabel?.text = data.description
         if let urlString = data.imageHref {
             self.iconView?.sd_setImage(with: URL(string: urlString),
-                                        placeholderImage: UIImage(named: "default"), options: .progressiveLoad,
+                                       placeholderImage: UIImage(named: "default"), options: .fromLoaderOnly,
                                         completed: {(image, error, cacheType, url) in })
         }else{
             self.iconView?.image = UIImage(named: "default")

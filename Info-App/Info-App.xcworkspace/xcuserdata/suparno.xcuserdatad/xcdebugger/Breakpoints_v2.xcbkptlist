@@ -15,5 +15,53 @@
             stopOnStyle = "0">
          </BreakpointContent>
       </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Info-App/ViewControllers/HomeViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "fetchInfoData()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59 - 8b3acf6075ae62bd"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Info_App.HomeViewController.fetchInfoData() -&gt; ()"
+                  moduleName = "Info-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suparno/Documents/GIT/Info-App/Info-App/Info-App/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "81"
+                  endingLineNumber = "81"
+                  offsetFromSymbolStart = "388">
+               </Location>
+               <Location
+                  uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59 - 50387f0300bfe307"
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Info_App.ResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Info_App.HomeViewController.fetchInfoData() -&gt; ()"
+                  moduleName = "Info-App"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/suparno/Documents/GIT/Info-App/Info-App/Info-App/ViewControllers/HomeViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "189">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
    </Breakpoints>
 </Bucket>

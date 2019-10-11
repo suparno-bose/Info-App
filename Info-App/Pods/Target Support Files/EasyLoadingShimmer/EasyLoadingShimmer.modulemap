@@ -1,0 +1,6 @@
+framework module EasyLoadingShimmer {
+  umbrella header "EasyLoadingShimmer-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -32,6 +32,12 @@ class HomeViewController: UIViewController {
     
     // MARK: - UI related methods
     func setupUI(){
+        let attrs = [
+            NSAttributedStringKey.foregroundColor: UIColor.darkGray,
+            NSAttributedStringKey.font: UIFont(name: "Raleway-Light", size: 28.0)
+            ]
+        navigationController?.navigationBar.titleTextAttributes = attrs as Any as? [NSAttributedStringKey: Any]
+        navigationController?.navigationBar.backgroundColor = UIColor("#34495e") // Balize hole
         self.view.backgroundColor = UIColor("#34495e") // Wet Ashfalt
         
         factTableView = UITableView(frame: CGRect.zero)

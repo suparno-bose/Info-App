@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		242791B52350BBA80029B1A7 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 242791B12350BBA80029B1A7 /* SIL Open Font License.txt */; };
+		242791B62350BBA80029B1A7 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242791B22350BBA80029B1A7 /* Raleway-Regular.ttf */; };
+		242791B72350BBA80029B1A7 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242791B32350BBA80029B1A7 /* Raleway-Light.ttf */; };
+		242791B82350BBA80029B1A7 /* Raleway-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242791B42350BBA80029B1A7 /* Raleway-Bold.ttf */; };
 		24329BF1234DAB190039A2E7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24329BF0234DAB190039A2E7 /* AppDelegate.swift */; };
 		24329BFA234DAB1A0039A2E7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 24329BF9234DAB1A0039A2E7 /* Assets.xcassets */; };
 		24329BFD234DAB1A0039A2E7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 24329BFB234DAB1A0039A2E7 /* LaunchScreen.storyboard */; };
@@ -37,6 +41,10 @@
 		00301D570331E1ECF31F622F /* Pods_Info_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Info_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		02AD4BF1AA8015707867879C /* Pods-Info-AppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Info-AppTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-Info-AppTests/Pods-Info-AppTests.release.xcconfig"; sourceTree = "<group>"; };
 		05A9D1058BBB71CD7EB921EB /* Pods_Info_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Info_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		242791B12350BBA80029B1A7 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
+		242791B22350BBA80029B1A7 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
+		242791B32350BBA80029B1A7 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
+		242791B42350BBA80029B1A7 /* Raleway-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Bold.ttf"; sourceTree = "<group>"; };
 		24329BED234DAB190039A2E7 /* Info-App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Info-App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		24329BF0234DAB190039A2E7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		24329BF9234DAB1A0039A2E7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -75,6 +83,18 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		242791B02350BBA80029B1A7 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				242791B12350BBA80029B1A7 /* SIL Open Font License.txt */,
+				242791B22350BBA80029B1A7 /* Raleway-Regular.ttf */,
+				242791B32350BBA80029B1A7 /* Raleway-Light.ttf */,
+				242791B42350BBA80029B1A7 /* Raleway-Bold.ttf */,
+			);
+			name = Resources;
+			path = "Info-App/Resources";
+			sourceTree = SOURCE_ROOT;
+		};
 		24329BE4234DAB190039A2E7 = {
 			isa = PBXGroup;
 			children = (
@@ -103,6 +123,7 @@
 				24329C12234DB5180039A2E7 /* Models */,
 				24329C13234DB5180039A2E7 /* ViewControllers */,
 				24329C20234E10E60039A2E7 /* View */,
+				242791B02350BBA80029B1A7 /* Resources */,
 				24329BF9234DAB1A0039A2E7 /* Assets.xcassets */,
 				24329BFB234DAB1A0039A2E7 /* LaunchScreen.storyboard */,
 				24329BFE234DAB1A0039A2E7 /* Info.plist */,
@@ -257,8 +278,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				242791B52350BBA80029B1A7 /* SIL Open Font License.txt in Resources */,
+				242791B82350BBA80029B1A7 /* Raleway-Bold.ttf in Resources */,
+				242791B72350BBA80029B1A7 /* Raleway-Light.ttf in Resources */,
 				24329BFD234DAB1A0039A2E7 /* LaunchScreen.storyboard in Resources */,
 				24329BFA234DAB1A0039A2E7 /* Assets.xcassets in Resources */,
+				242791B62350BBA80029B1A7 /* Raleway-Regular.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -325,6 +350,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Info-App/Pods-Info-App-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
 				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -333,6 +359,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",

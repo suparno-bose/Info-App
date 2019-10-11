@@ -1,4 +1,5 @@
 PODS:
+  - HexColors (6.0.0)
   - ObjectMapper (3.3.0)
   - SDWebImage (5.1.1):
     - SDWebImage/Core (= 5.1.1)
@@ -6,21 +7,24 @@ PODS:
   - SnapKit (4.0.1)
 
 DEPENDENCIES:
+  - HexColors
   - ObjectMapper (= 3.3.0)
   - SDWebImage
   - SnapKit (~> 4.0.0)
 
 SPEC REPOS:
   https://github.com/CocoaPods/Specs.git:
+    - HexColors
     - ObjectMapper
     - SDWebImage
     - SnapKit
 
 SPEC CHECKSUMS:
+  HexColors: f8c66339541a74bb08905bfe7cd4f8cc85e9e173
   ObjectMapper: b612bf8c8e99c4dc0bb6013a51f7c27966ed5da9
   SDWebImage: 96d7f03415ccb28d299d765f93557ff8a617abd8
   SnapKit: 0de968a9fec17499afa29683b05d0c775b6d1c29
 
-PODFILE CHECKSUM: 1edaef29cc2a695049480741a94ebff372c9bea9
+PODFILE CHECKSUM: eab995ba195d53deb5370c1bfcbd3c342876baf8
 
 COCOAPODS: 1.5.0

@@ -107,7 +107,7 @@ class FactCellTableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
     
-    func update(with data: InfoModel) {
+    func update(with data: ResponseModel.InfoModel) {
         self.titleLabel?.text = data.title
         self.descriptionLabel?.text = data.description
         if let urlString = data.imageHref {

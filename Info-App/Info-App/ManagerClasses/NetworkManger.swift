@@ -7,9 +7,6 @@
 //
 
 import UIKit
-import ObjectMapper
-
-let DATA_URL = "https://dl.dropboxusercontent.com/s/2iodh4vg0eortkl/facts.json"
 
 enum NetworkError: Error {
     case networkError(description: String)
@@ -32,10 +29,9 @@ class NetworkManger: NSObject {
                 }
                 else{
                     if let jsonString = String(data: data!, encoding: .ascii){
-                        let dataWithUTF8Encoding = jsonString.data(using: String.Encoding.utf8)
                         do {
-                            let json = try JSONSerialization.jsonObject(with: dataWithUTF8Encoding!) as? [String: Any]
-                            let response = Mapper<ResponseModel>().map(JSONObject: json)
+                            let jsonData = jsonString.data(using: .utf8)!
+                            let response = try JSONDecoder().decode(ResponseModel.self, from: jsonData)
                             callBackHandler(response, nil)
                         }
                         catch {

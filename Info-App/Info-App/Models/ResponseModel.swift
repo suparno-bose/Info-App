@@ -7,20 +7,15 @@
 //
 
 import UIKit
-import ObjectMapper
 
-class ResponseModel: Mappable {
+class ResponseModel: Codable {
+    
+    struct InfoModel: Codable {
+        var title : String?
+        var description : String?
+        var imageHref : String?
+    }
     
     var title : String?
-    var infoArray : [InfoModel]?
-    
-    convenience required init?(map: Map) {
-        self.init()
-    }
-    
-    // Mappable
-    func mapping(map: Map) {
-        title    <- map["title"]
-        infoArray <- map["rows"]
-    }
+    var rows : [InfoModel]?
 }

@@ -18,64 +18,48 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59"
-            shouldBeEnabled = "No"
+            uuid = "DD973EEC-5016-4A44-9F74-D84FE13B5EF9"
+            shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Info-App/ViewControllers/HomeViewController.swift"
+            filePath = "Info-App/ManagerClasses/NetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "106"
-            endingLineNumber = "106"
-            landmarkName = "fetchInfoData()"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "getInfoData(callBackHandler:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59 - 8b3acf6075ae62bd"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Info_App.HomeViewController.fetchInfoData() -&gt; ()"
-                  moduleName = "Info-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suparno/Documents/GIT/Info-App/Info-App/Info-App/ViewControllers/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "81"
-                  endingLineNumber = "81"
-                  offsetFromSymbolStart = "388">
-               </Location>
-               <Location
-                  uuid = "73E43EB9-74FE-4E48-B250-FE7AA0901A59 - 50387f0300bfe307"
-                  shouldBeEnabled = "No"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;Info_App.ResponseModel&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in Info_App.HomeViewController.fetchInfoData() -&gt; ()"
-                  moduleName = "Info-App"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/suparno/Documents/GIT/Info-App/Info-App/Info-App/ViewControllers/HomeViewController.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "82"
-                  endingLineNumber = "82"
-                  offsetFromSymbolStart = "189">
-               </Location>
-            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "718FBE18-FF16-41B6-896B-8909BFC8796F"
+            uuid = "5EA46E1F-10EA-4605-BC03-870F460A6C4B"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Info-App/ViewControllers/HomeViewController.swift"
+            filePath = "Info-App/ManagerClasses/NetworkManger.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "fetchInfoData()"
+            startingLineNumber = "39"
+            endingLineNumber = "39"
+            landmarkName = "getInfoData(callBackHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3EBF0F2F-89ED-455E-B689-E868D43E34DC"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Info-App/ManagerClasses/NetworkManger.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "getInfoData(callBackHandler:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

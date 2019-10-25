@@ -9,25 +9,50 @@
 import XCTest
 
 class ResponseModelTests: XCTestCase {
-
-    override func setUp() {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-    }
-
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
+    
+    func testSuccessfulJSONParsing() {
+        let jsonString : String = """
+        {
+        "title":"About Canada",
+        "rows":[
+            {
+            "title":"Beavers",
+            "description":"Beavers are second only to humans in their ability to manipulate and change their environment. They can measure up to 1.3 metres long. A group of beavers is called a colony",
+            "imageHref":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"
+            }]
         }
+        """
+            do {
+                let jsonData = jsonString.data(using: .utf8)!
+                let actual_response = try JSONDecoder().decode(ResponseModel.self, from: jsonData)
+                // Success Persing JSON Model
+            }
+            catch {
+                // Error thrown during json parsing
+                XCTAssert(true, "Unable to parse json data")
+            }
     }
-
+    
+    func testUnsuccessfulJSONParsing() {
+        let jsonString : String = """
+        {
+        "name":"About Canada",
+        "infos":[
+            {
+            "title":"Beavers",
+            "description":"Beavers are second only to humans in their ability to manipulate and change their environment. They can measure up to 1.3 metres long. A group of beavers is called a colony",
+            "imageHref":"http://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/American_Beaver.jpg/220px-American_Beaver.jpg"
+            }]
+        }
+        """
+            do {
+                let jsonData = jsonString.data(using: .utf8)!
+                let response = try JSONDecoder().decode(ResponseModel.self, from: jsonData)
+                // Success Persing JSON Model
+            }
+            catch {
+                // Error thrown during json parsing
+                XCTAssert(true, "Unable to parse json data")
+            }
+    }
 }

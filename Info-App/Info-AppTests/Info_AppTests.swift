@@ -13,7 +13,7 @@ class Info_AppTests: XCTestCase {
 
     func testNeworkAPI(){
         NetworkManger.getInfoData { (info, error) in
-            if let error = error{
+            if error != nil{
                 XCTAssert(true, "Unable to fetch info data")
             }
             else{
@@ -21,5 +21,4 @@ class Info_AppTests: XCTestCase {
             }
         }
     }
-
 }

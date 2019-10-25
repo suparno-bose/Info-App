@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		24096044235F00D9004C440E /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24096043235F00D8004C440E /* HomeViewModel.swift */; };
 		24096046235F2297004C440E /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24096045235F2297004C440E /* Define.swift */; };
+		240960482362D9B3004C440E /* ResponseModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 240960472362D9B3004C440E /* ResponseModelTests.swift */; };
 		242791B52350BBA80029B1A7 /* SIL Open Font License.txt in Resources */ = {isa = PBXBuildFile; fileRef = 242791B12350BBA80029B1A7 /* SIL Open Font License.txt */; };
 		242791B62350BBA80029B1A7 /* Raleway-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242791B22350BBA80029B1A7 /* Raleway-Regular.ttf */; };
 		242791B72350BBA80029B1A7 /* Raleway-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 242791B32350BBA80029B1A7 /* Raleway-Light.ttf */; };
@@ -45,6 +46,7 @@
 		05A9D1058BBB71CD7EB921EB /* Pods_Info_AppTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Info_AppTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		24096043235F00D8004C440E /* HomeViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		24096045235F2297004C440E /* Define.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		240960472362D9B3004C440E /* ResponseModelTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModelTests.swift; sourceTree = "<group>"; };
 		242791B12350BBA80029B1A7 /* SIL Open Font License.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "SIL Open Font License.txt"; sourceTree = "<group>"; };
 		242791B22350BBA80029B1A7 /* Raleway-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Regular.ttf"; sourceTree = "<group>"; };
 		242791B32350BBA80029B1A7 /* Raleway-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Raleway-Light.ttf"; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 			children = (
 				24329C07234DAB1A0039A2E7 /* Info_AppTests.swift */,
 				24329C09234DAB1A0039A2E7 /* Info.plist */,
+				240960472362D9B3004C440E /* ResponseModelTests.swift */,
 			);
 			path = "Info-AppTests";
 			sourceTree = "<group>";
@@ -364,9 +367,7 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-Info-App/Pods-Info-App-frameworks.sh",
-				"${BUILT_PRODUCTS_DIR}/EasyLoadingShimmer/EasyLoadingShimmer.framework",
 				"${BUILT_PRODUCTS_DIR}/HexColors/HexColors.framework",
-				"${BUILT_PRODUCTS_DIR}/ObjectMapper/ObjectMapper.framework",
 				"${BUILT_PRODUCTS_DIR}/ReachabilitySwift/Reachability.framework",
 				"${BUILT_PRODUCTS_DIR}/SDWebImage/SDWebImage.framework",
 				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
@@ -376,9 +377,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/EasyLoadingShimmer.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/HexColors.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/ObjectMapper.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Reachability.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SDWebImage.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
@@ -413,6 +412,7 @@
 			files = (
 				24329C1B234DBDEC0039A2E7 /* NetworkManger.swift in Sources */,
 				24329C08234DAB1A0039A2E7 /* Info_AppTests.swift in Sources */,
+				240960482362D9B3004C440E /* ResponseModelTests.swift in Sources */,
 				24329C1F234DFB950039A2E7 /* ResponseModel.swift in Sources */,
 				24329C1C234DCAA20039A2E7 /* InfoModel.swift in Sources */,
 			);

@@ -24,10 +24,7 @@ class HomeViewModel {
     
     // MARK: - UI related methods
     func setupUI(){
-        //Navigationbar beautification
-
-        
-        self.view.backgroundColor = UIColor("#34495e") // Wet Ashfalt
+        self.view.backgroundColor = THE_COLOR_WET_ASHFALT
         //Table View initialisation
         factTableView = UITableView(frame: CGRect.zero)
         factTableView.backgroundColor = UIColor.clear
@@ -41,7 +38,7 @@ class HomeViewModel {
         }
 
         factTableView.separatorColor = UIColor.gray
-        factTableView.register(FactCellTableViewCell.self, forCellReuseIdentifier: "FactCell")
+        factTableView.register(FactCellTableViewCell.self, forCellReuseIdentifier: FactCellTableViewCell.identifier)
         factTableView.estimatedRowHeight = 80
         factTableView.rowHeight = UITableViewAutomaticDimension
     }
@@ -49,10 +46,10 @@ class HomeViewModel {
     func setupNavigationBar(navController: UINavigationController) {
         let attrs = [
             NSAttributedStringKey.foregroundColor: UIColor.darkGray,
-            NSAttributedStringKey.font: UIFont(name: "Raleway-Light", size: 28.0)
+            NSAttributedStringKey.font: TITLE_FONT_LARGE
             ]
         navController.navigationBar.titleTextAttributes = attrs as Any as? [NSAttributedStringKey: Any]
-        navController.navigationBar.backgroundColor = UIColor("#34495e") // Balize hole
+        navController.navigationBar.backgroundColor = THE_COLOR_BALIZE_HOLE
     }
     
     func updateUI(navigationItem: UINavigationItem, titleText: String) {
@@ -62,7 +59,7 @@ class HomeViewModel {
         self.factTableView.reloadData()
     }
     
-    func showToast(type: Toast_String) {
+    func showToast(type: ToastString) {
         self.view!.makeToast(type.rawValue,
                             duration: 3.0, position: .bottom)
     }

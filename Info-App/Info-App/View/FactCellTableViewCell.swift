@@ -12,7 +12,7 @@ import SnapKit
 import HexColors
 
 class FactCellTableViewCell: UITableViewCell {
-    
+    static let identifier = "FactCell"
     var iconView : UIImageView!
     var titleLabel : UILabel!
     var descriptionLabel : UILabel!
@@ -72,8 +72,8 @@ class FactCellTableViewCell: UITableViewCell {
         self.titleLabel = UILabel(frame: CGRect.zero)
         self.titleLabel.numberOfLines = 0
         self.titleLabel.text = ""
-        self.titleLabel.textColor = UIColor("#ecf0f1") //Cloud
-        self.titleLabel.font = UIFont(name: "Raleway-Regular", size: 24.0)
+        self.titleLabel.textColor = THE_COLOR_CLOUD
+        self.titleLabel.font = TITLE_FONT_MEDIUM
         self.contentView.addSubview(self.titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -88,8 +88,8 @@ class FactCellTableViewCell: UITableViewCell {
         self.descriptionLabel = UILabel(frame: CGRect.zero)
         self.descriptionLabel.numberOfLines = 0
         self.descriptionLabel.text = ""
-        self.descriptionLabel.textColor = UIColor("##bdc3c7") //Silver
-        self.descriptionLabel.font = UIFont(name: "Raleway-Light", size: 18.0)
+        self.descriptionLabel.textColor = THE_COLOR_SILVER
+        self.descriptionLabel.font = TITLE_FONT_SMALL
         self.contentView.addSubview(self.descriptionLabel)
         
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -112,10 +112,10 @@ class FactCellTableViewCell: UITableViewCell {
         self.descriptionLabel?.text = data.description
         if let urlString = data.imageHref {
             self.iconView?.sd_setImage(with: URL(string: urlString),
-                                       placeholderImage: UIImage(named: "default"), options: .fromLoaderOnly,
+                                       placeholderImage: DEFAULT_IMAGE, options: .fromLoaderOnly,
                                         completed: {(image, error, cacheType, url) in })
         }else{
-            self.iconView?.image = UIImage(named: "default")
+            self.iconView?.image = DEFAULT_IMAGE
         }
         
     }

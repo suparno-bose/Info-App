@@ -9,8 +9,6 @@
 import UIKit
 import SDWebImage
 import SnapKit
-import HexColors
-import EasyLoadingShimmer
 import Reachability
 class HomeViewController: UIViewController {
 
@@ -36,12 +34,12 @@ class HomeViewController: UIViewController {
         }
         //Initialise Reachability
         reachability.whenUnreachable = { _ in
-            self.viewModel.showToast(type: Toast_String.Connection_Problem)
+            self.viewModel.showToast(type: ToastString.Connection_Problem)
         }
         do {
             try reachability.startNotifier()
         } catch {
-            print("Unable to start notifier")
+            // Unable to start notifier
         }
         
         fetchInfoData()
@@ -56,14 +54,14 @@ class HomeViewController: UIViewController {
     @objc func fetchInfoData() {
         guard reachability.connection != .none else{
             viewModel.endRefreshing()
-            self.viewModel.showToast(type: Toast_String.Connection_Problem)
+            self.viewModel.showToast(type: ToastString.Connection_Problem)
             return
         }
         NetworkManger.getInfoData { (responseModel, error) in
             if error != nil{
                 DispatchQueue.main.async {
                     self.viewModel.endRefreshing()
-                    self.viewModel.showToast(type: Toast_String.Server_Unreachable)
+                    self.viewModel.showToast(type: ToastString.Server_Unreachable)
                 }
             }
             else{
@@ -85,7 +83,7 @@ extension HomeViewController: UITableViewDataSource {
     }
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "FactCell", for: indexPath) as! FactCellTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: FactCellTableViewCell.identifier, for: indexPath) as! FactCellTableViewCell
         cell.update(with: (responseData?.rows![indexPath.item])!)
         return cell
     }

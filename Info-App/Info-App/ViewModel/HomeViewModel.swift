@@ -22,7 +22,7 @@ class HomeViewModel {
         self.view = view
     }
     
-    // MARK: - UI related methods
+    // MARK: - UI related methods∫
     func setupUI(){
         self.view.backgroundColor = THE_COLOR_WET_ASHFALT
         //Table View initialisation

@@ -16,7 +16,7 @@ class HomeViewController: UIViewController {
     // MARK: - Data variables
     var responseData : ResponseModel?
     // MARK: -
-    let reachability = Reachability()!
+    var reachability : Reachability?
     
     // MARK: - Life-cycle methods
     
@@ -33,15 +33,19 @@ class HomeViewController: UIViewController {
             self.fetchInfoData()
         }
         //Initialise Reachability
-        reachability.whenUnreachable = { _ in
-            self.viewModel.showToast(type: ToastString.Connection_Problem)
-        }
         do {
-            try reachability.startNotifier()
+            reachability = try Reachability()
+            reachability?.whenUnreachable = { _ in
+                self.viewModel.showToast(type: ToastString.Connection_Problem)
+            }
+            do {
+                try reachability?.startNotifier()
+            } catch {
+                // Unable to start notifier
+            }
         } catch {
             // Unable to start notifier
         }
-        
         fetchInfoData()
     }
     
@@ -52,7 +56,7 @@ class HomeViewController: UIViewController {
 
     // MARK: - Data mannagement methods
     @objc func fetchInfoData() {
-        guard reachability.connection != .none else{
+        guard reachability?.connection != .none else{
             viewModel.endRefreshing()
             self.viewModel.showToast(type: ToastString.Connection_Problem)
             return

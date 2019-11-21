@@ -24,9 +24,10 @@ class HomeViewModel {
     
     // MARK: - UI related methods∫
     func setupUI(){
-        self.view.backgroundColor = THE_COLOR_WET_ASHFALT
+        self.view.backgroundColor = Utility.THE_COLOR_WET_ASHFALT
         //Table View initialisation
         factTableView = UITableView(frame: CGRect.zero)
+        factTableView.accessibilityIdentifier = AccessibilityIdentifiers.FactTableView.rawValue
         factTableView.backgroundColor = UIColor.clear
         self.view.addSubview(factTableView)
         factTableView.translatesAutoresizingMaskIntoConstraints = false
@@ -46,10 +47,10 @@ class HomeViewModel {
     func setupNavigationBar(navController: UINavigationController) {
         let attrs = [
             NSAttributedStringKey.foregroundColor: UIColor.darkGray,
-            NSAttributedStringKey.font: TITLE_FONT_LARGE
+            NSAttributedStringKey.font: Utility.TITLE_FONT_LARGE
             ]
         navController.navigationBar.titleTextAttributes = attrs as Any as? [NSAttributedStringKey: Any]
-        navController.navigationBar.backgroundColor = THE_COLOR_BALIZE_HOLE
+        navController.navigationBar.backgroundColor = Utility.THE_COLOR_BALIZE_HOLE
     }
     
     func updateUI(navigationItem: UINavigationItem, titleText: String) {

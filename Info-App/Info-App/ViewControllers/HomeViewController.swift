@@ -32,6 +32,8 @@ class HomeViewController: UIViewController {
         viewModel.refrehControllerValueChangeHandler = {
             self.fetchInfoData()
         }
+        
+        self.navigationItem.accessibilityLabel = "Navigation Title"
         //Initialise Reachability
         do {
             reachability = try Reachability()
@@ -88,6 +90,7 @@ extension HomeViewController: UITableViewDataSource {
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: FactCellTableViewCell.identifier, for: indexPath) as! FactCellTableViewCell
+        cell.accessibilityIdentifier = AccessibilityIdentifiers.FactCellTableViewCell.rawValue + String(indexPath.row)
         cell.update(with: (responseData?.rows![indexPath.item])!)
         return cell
     }

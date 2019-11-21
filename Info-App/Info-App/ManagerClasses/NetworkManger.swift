@@ -17,7 +17,7 @@ enum NetworkError: Error {
 class NetworkManger: NSObject {
     
     static func getInfoData(callBackHandler : @escaping (ResponseModel?, Error?) -> ()) {
-        if let url = URL(string: DATA_URL) {
+        if let url = URL(string: Utility.DATA_URL) {
             var request = URLRequest(url: url)
             request.httpMethod = "GET"
             request.addValue("application/json", forHTTPHeaderField: "Content-Type")

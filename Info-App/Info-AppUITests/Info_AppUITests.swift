@@ -19,17 +19,51 @@ class Info_AppUITests: XCTestCase {
         // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
     }
 
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() {
+    /// Test case to check if number of cells in tableview is as expected.
+    func testNumberOfItems() {
         // UI tests must launch the application that they test.
         let app = XCUIApplication()
         app.launch()
-
-        // Use recording to get started writing UI tests.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
+        
+        let navigationTitleText = XCUIApplication().staticTexts.matching(identifier: AccessibilityIdentifiers.NavigationTitle.rawValue).element
+        let existsPredicate = NSPredicate(format: "label != \"\"")
+        expectation(for: existsPredicate, evaluatedWith: navigationTitleText, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        let tableView = XCUIApplication().tables[AccessibilityIdentifiers.FactTableView.rawValue]
+        XCTAssertTrue(tableView.cells.count == 14)
+    }
+    
+    /// Test case to check if title label of 2nd tableView cell is as expected.
+    func test2ndTableCellTitle() {
+        // UI tests must launch the application that they test.
+        let app = XCUIApplication()
+        app.launch()
+        
+        let navigationTitleText = XCUIApplication().staticTexts.matching(identifier: AccessibilityIdentifiers.NavigationTitle.rawValue).element
+        let existsPredicate = NSPredicate(format: "label != \"\"")
+        expectation(for: existsPredicate, evaluatedWith: navigationTitleText, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        
+        let tableView = XCUIApplication().tables[AccessibilityIdentifiers.FactTableView.rawValue]
+        let secondCell = tableView.cells[AccessibilityIdentifiers.FactCellTableViewCell.rawValue + String(1)]
+        let titleLabel = secondCell.staticTexts.matching(identifier: AccessibilityIdentifiers.FactTitleLabel.rawValue).element
+                
+        XCTAssertTrue(titleLabel.label == "Flag")
+    }
+    
+    /// Test case to check if title of navigation bar title is as expected.
+    func testTitleName() {
+        // UI tests must launch the application that they test.rb
+        let app = XCUIApplication()
+        app.launch()
+        
+        let navigationTitleText = XCUIApplication().staticTexts.matching(identifier: AccessibilityIdentifiers.NavigationTitle.rawValue).element
+        let existsPredicate = NSPredicate(format: "label != \"\"")
+        expectation(for: existsPredicate, evaluatedWith: navigationTitleText, handler: nil)
+        waitForExpectations(timeout: 5, handler: nil)
+        XCTAssert(navigationTitleText.exists)
+        XCTAssertTrue(navigationTitleText.title == "About Canada")
     }
 
     func testLaunchPerformance() {

@@ -66,14 +66,16 @@ class FactCellTableViewCell: UITableViewCell {
             make.width.equalTo(90)
             make.bottom.equalTo(contentView).offset(-8).priority(500)
         }
+        
+        iconView.accessibilityIdentifier = AccessibilityIdentifiers.FactImageView.rawValue
     }
     
     func addTitleLabel() {
         self.titleLabel = UILabel(frame: CGRect.zero)
         self.titleLabel.numberOfLines = 0
         self.titleLabel.text = ""
-        self.titleLabel.textColor = THE_COLOR_CLOUD
-        self.titleLabel.font = TITLE_FONT_MEDIUM
+        self.titleLabel.textColor = Utility.THE_COLOR_CLOUD
+        self.titleLabel.font = Utility.TITLE_FONT_MEDIUM
         self.contentView.addSubview(self.titleLabel)
         
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -82,14 +84,15 @@ class FactCellTableViewCell: UITableViewCell {
             make.leading.equalTo(self.iconView!.snp.trailing).offset(8)
             make.trailing.equalTo(self.contentView).offset(8)
         }
+        titleLabel.accessibilityIdentifier = AccessibilityIdentifiers.FactTitleLabel.rawValue
     }
     
     func addDescriptionLabel() {
         self.descriptionLabel = UILabel(frame: CGRect.zero)
         self.descriptionLabel.numberOfLines = 0
         self.descriptionLabel.text = ""
-        self.descriptionLabel.textColor = THE_COLOR_SILVER
-        self.descriptionLabel.font = TITLE_FONT_SMALL
+        self.descriptionLabel.textColor = Utility.THE_COLOR_SILVER
+        self.descriptionLabel.font = Utility.TITLE_FONT_SMALL
         self.contentView.addSubview(self.descriptionLabel)
         
         descriptionLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -99,6 +102,7 @@ class FactCellTableViewCell: UITableViewCell {
             make.bottom.equalTo(self.contentView).offset(-8)
             make.trailing.equalTo(self.contentView)
         }
+        descriptionLabel.accessibilityIdentifier = AccessibilityIdentifiers.FactDescriptionLabel.rawValue
     }
     
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -112,10 +116,10 @@ class FactCellTableViewCell: UITableViewCell {
         self.descriptionLabel?.text = data.description
         if let urlString = data.imageHref {
             self.iconView?.sd_setImage(with: URL(string: urlString),
-                                       placeholderImage: DEFAULT_IMAGE, options: .fromLoaderOnly,
+                                       placeholderImage: Utility.DEFAULT_IMAGE, options: .fromLoaderOnly,
                                         completed: {(image, error, cacheType, url) in })
         }else{
-            self.iconView?.image = DEFAULT_IMAGE
+            self.iconView?.image = Utility.DEFAULT_IMAGE
         }
         
     }

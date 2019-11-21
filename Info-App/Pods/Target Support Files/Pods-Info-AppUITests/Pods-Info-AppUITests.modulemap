@@ -1,0 +1,6 @@
+module Pods_Info_AppUITests {
+  umbrella header "Pods-Info-AppUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}

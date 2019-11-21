@@ -1,4 +1,4 @@
-framework module Pods_Info_AppTests {
+module Pods_Info_AppTests {
   umbrella header "Pods-Info-AppTests-umbrella.h"
 
   export *

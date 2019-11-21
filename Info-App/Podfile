@@ -2,19 +2,35 @@
 # platform :ios, '9.0'
 
 target 'Info-App' do
-  # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
-  use_frameworks!
+    # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
+    use_frameworks!
+    
+    # Pods for Info-App
+    pod 'SDWebImage', :modular_headers => true
+    pod 'SnapKit', '~> 4.0.0'
+    pod 'HexColors'
+    pod 'Toast-Swift'
+    pod 'ReachabilitySwift'
+    
+end
 
-  # Pods for Info-App
-  pod 'SDWebImage', :modular_headers => true
-  pod 'SnapKit', '~> 4.0.0'
-  pod 'HexColors'
-  pod 'Toast-Swift'
-  pod 'ReachabilitySwift'
-
-  target 'Info-AppTests' do
+target 'Info-AppTests' do
     inherit! :search_paths
     # Pods for testing
-  end
+    pod 'SDWebImage', :modular_headers => true
+    pod 'SnapKit', '~> 4.0.0'
+    pod 'HexColors'
+    pod 'Toast-Swift'
+    pod 'ReachabilitySwift'
+end
 
+
+target 'Info-AppUITests' do
+    inherit! :search_paths
+    # Pods for testing
+    pod 'SDWebImage', :modular_headers => true
+    pod 'SnapKit', '~> 4.0.0'
+    pod 'HexColors'
+    pod 'Toast-Swift'
+    pod 'ReachabilitySwift'
 end

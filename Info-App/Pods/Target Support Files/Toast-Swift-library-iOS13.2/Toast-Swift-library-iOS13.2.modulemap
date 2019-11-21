@@ -1,0 +1,7 @@
+module Toast_Swift {
+  umbrella header "Toast-Swift-library-iOS13.2-umbrella.h"
+  exclude header "Toast-Swift-library-iOS13.0-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,7 @@
+module SDWebImage {
+  umbrella header "SDWebImage-library-iOS13.0-umbrella.h"
+  exclude header "SDWebImage-library-iOS13.2-umbrella.h"
+
+  export *
+  module * { export * }
+}

@@ -1,0 +1,13 @@
+ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES
+GCC_PREPROCESSOR_DEFINITIONS = $(inherited) COCOAPODS=1
+HEADER_SEARCH_PATHS = $(inherited) "${PODS_ROOT}/Headers/Public" "${PODS_ROOT}/Headers/Public/SDWebImage"
+LIBRARY_SEARCH_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HexColors-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/SDWebImage-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/Toast-Swift-library-iOS13.2"
+OTHER_CFLAGS = $(inherited) -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HexColors-library-iOS13.2/HexColors.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-library-iOS13.2/Reachability.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-library-iOS13.2/SnapKit.modulemap" -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Toast-Swift-library-iOS13.2/Toast_Swift.modulemap" -fmodule-map-file="${PODS_ROOT}/Headers/Public/SDWebImage/SDWebImage-library-iOS13.2.modulemap"
+OTHER_LDFLAGS = $(inherited) -ObjC -l"HexColors-library-iOS13.2" -l"ReachabilitySwift-library-iOS13.2" -l"SDWebImage-library-iOS13.2" -l"SnapKit-library-iOS13.2" -l"Toast-Swift-library-iOS13.2" -framework "CoreTelephony" -framework "ImageIO" -framework "QuartzCore" -framework "SystemConfiguration"
+OTHER_SWIFT_FLAGS = $(inherited) -D COCOAPODS -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/HexColors-library-iOS13.2/HexColors.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-library-iOS13.2/Reachability.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-library-iOS13.2/SnapKit.modulemap" -Xcc -fmodule-map-file="${PODS_CONFIGURATION_BUILD_DIR}/Toast-Swift-library-iOS13.2/Toast_Swift.modulemap" -Xcc -fmodule-map-file="${PODS_ROOT}/Headers/Public/SDWebImage/SDWebImage-library-iOS13.2.modulemap"
+PODS_BUILD_DIR = ${BUILD_DIR}
+PODS_CONFIGURATION_BUILD_DIR = ${PODS_BUILD_DIR}/$(CONFIGURATION)$(EFFECTIVE_PLATFORM_NAME)
+PODS_PODFILE_DIR_PATH = ${SRCROOT}/.
+PODS_ROOT = ${SRCROOT}/Pods
+SWIFT_INCLUDE_PATHS = $(inherited) "${PODS_CONFIGURATION_BUILD_DIR}/HexColors-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/ReachabilitySwift-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/SnapKit-library-iOS13.2" "${PODS_CONFIGURATION_BUILD_DIR}/Toast-Swift-library-iOS13.2"
+USE_RECURSIVE_SCRIPT_INPUTS_IN_SCRIPT_PHASES = YES

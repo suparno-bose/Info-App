@@ -1,0 +1,1 @@
+../../../Target Support Files/SDWebImage-library-iOS13.2/SDWebImage-library-iOS13.2-umbrella.h
